@@ -1,0 +1,329 @@
+@import "variables";
+
+@mixin transition {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin background-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include mq(950px) {
+    background-position: 80%;
+  }
+
+  @include mq($md) {
+    background-position: right;
+  }
+
+  @include mq($sm) {
+    background-position: 80%;
+  }
+
+  @include mq($xms) {
+  }
+}
+
+@mixin h3 {
+  margin-top: 16px;
+  font-family: $open-sans-semi-bold;
+  font-weight: 600;
+  font-size: (16px);
+  letter-spacing: 0.17em;
+  line-height: 1;
+  text-align: left;
+  color: $music-page-white;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+@mixin svg-interaction {
+  svg {
+    path,
+    circle,
+    rect {
+      @include transition;
+    }
+
+    &:hover {
+      path,
+      circle,
+      rect {
+        stroke: $orange;
+        fill: $orange;
+      }
+    }
+  }
+}
+
+@mixin mq($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin mqh($size) {
+  @media screen and (max-height: $size) {
+    @content;
+  }
+}
+
+@mixin mqhmin($size) {
+  @media screen and (min-height: $size) {
+    @content;
+  }
+}
+
+@mixin scroll-bar {
+  &::-webkit-scrollbar {
+    width: (10px / $divider);
+
+    @include mq($xls) {
+      display: none;
+    }
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: lighten($color: $white, $amount: 0);
+
+    @include mq($xls) {
+      display: none;
+    }
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: darken($color: $blue, $amount: 0);
+    border-radius: 100px;
+    @include transition();
+
+    @include mq($xls) {
+      display: none;
+    }
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $blue;
+
+    @include mq($xls) {
+      display: none;
+    }
+  }
+}
+
+@mixin poppins-regular-16 {
+  font-family: $Heebo_Regular;
+  font-size: 16px;
+  color: $gray_color;
+}
+
+@mixin scroll-bar-hidden {
+  &::-webkit-scrollbar {
+    width: (10px / $divider);
+    display: none;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: lighten($color: $blue, $amount: 1);
+    display: none;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $blue;
+    border-radius: 100px;
+    display: none;
+    @include transition;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: lighten($color: $blue, $amount: 6);
+    display: none;
+  }
+}
+
+@mixin over-scroll-row {
+  @include mq($xls) {
+    width: auto;
+    flex-wrap: nowrap;
+    max-width: 100vw;
+    overflow: scroll;
+    @include scroll-bar-hidden;
+  }
+}
+
+@mixin col-md-xls {
+  @include mq($xls) {
+    max-width: calc((100% / 2) - 15px);
+    min-width: calc((100% / 2) - 15px);
+  }
+}
+
+@mixin grid($cols, $margin) {
+  -ms-flex: 0 0 (100%/ ($cols + $margin));
+  flex: 0 0 (100%/ ($cols + $margin));
+  max-width: (100%/ ($cols + $margin));
+  margin-right: ((100% / $cols)- (100%/ ($cols + $margin)));
+  margin-top: ((100% / $cols)- (100%/ ($cols + $margin)));
+
+  @include mq($xls) {
+    margin-top: 12%;
+  }
+}
+
+@function pxToVh($element) {
+  @return #{($element/1080) * 100}vh;
+}
+
+@function pxToVw($element) {
+  @return #{($element/1920) * 100}vw;
+}
+
+@function pxToEm($element) {
+  @return #{$element/16}em;
+}
+
+@mixin page-setting {
+  min-height: fit-content;
+  max-height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 0;
+  background-image: url("../../public/images/bg-Pag.svg");
+  padding: 0;
+  min-width: 94.79166666666667%;
+  max-width: 100%;
+  border: none;
+  @include background-img;
+  background-color: $white;
+  @include mq($xlg) {
+    gap: 25px;
+  }
+  @include mq($md) {
+    gap: 20px;
+  }
+  @include mqh($md) {
+    gap: 20px;
+  }
+  @include mqh($sm) {
+    gap: 10px;
+  }
+}
+
+// page body:
+@mixin pageBody {
+  max-width: 100%;
+  display: flex;
+  gap: 30px;
+  flex-grow: 1;
+  z-index: 1;
+  background-color: transparent;
+  min-height: 100%;
+
+  @include mq($xlg) {
+    gap: 25px;
+  }
+  @include mq($md) {
+    flex-direction: column;
+    gap: 30px;
+  }
+  @include mq($xls) {
+    gap: 20px;
+  }
+  @include mqh($sm) {
+    gap: 15px;
+  }
+}
+
+// page body 2 childs:
+@mixin bodyChilds {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  background: transparent;
+  backdrop-filter: blur(30px);
+  --webkit-backdrop-filter: blur(30px);
+  background-color: $blueBlur;
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1 1 45%;
+  z-index: 1;
+  max-height: 100%;
+  @include mq($xlg) {
+    padding: 15px;
+  }
+  @include mq($lg) {
+    padding: 10px;
+  }
+  @include mq($md) {
+    padding: 8px;
+    background-color: $blue;
+    backdrop-filter: blur(50px);
+    --webkit-backdrop-filter: blur(50px);
+  }
+}
+
+//customize card props
+@mixin cardProps {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 10px 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 0;
+  @include background-img;
+  @include mq($lg) {
+    padding: 5px;
+  }
+  @include mq($md) {
+    border-radius: 14px;
+  }
+}
+@mixin font-size-sub-title {
+  font-family: $sf-pro-medium;
+  font-size: 16px;
+  @include mq($xlg) {
+    font-size: 14px;
+  }
+  @include mq($lg) {
+    font-size: 12px;
+  }
+  @include mq($md) {
+    font-size: 11px;
+  }
+  @include mq($xls) {
+    font-size: 10px;
+  }
+}
+
+@mixin btnCard {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  border-radius: 20px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  --webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 3px;
+  @include mq($xlg) {
+    height: 35px;
+    width: 60px;
+  }
+  @include mq($lg) {
+    height: 35px;
+    width: 50px;
+  }
+}

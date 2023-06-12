@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  gap: pxToVh(295);
+  align-items: center;
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    .singlelink-icon {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+  }
+
+  .nav-link {
+    font-family: $manrope-medium;
+    font-weight: 600;
+    font-size: pxToEm(14);
+    text-align: center;
+    color: #000;
+  }
+
+  .sidenav-links {
+    display: flex;
+    gap: pxToVh(50.5);
+    align-items: center;
+    .nav-btn {
+      border-radius: 10px;
+      background:$purple;
+      font-family: Manrope, sans-serif;
+      font-weight: 600;
+      font-size: pxToEm(14);
+      text-align: center;
+      color: #fff;
+      padding: 17px 35px;
+    }
+  }
+
+  .navbar-logo {
+    font-family: $manrope-medium;
+    font-weight: bold;
+    font-size: pxToEm(20);
+    text-align: center;
+    color: $black;
+    align-items: center;
+  }
+}

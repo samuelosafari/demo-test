@@ -1,0 +1,64 @@
+.banner {
+  // display: flex;
+  // align-items: center;
+  .banner-info {
+    // max-width: 24.722222222%;
+  }
+  .banner-heading {
+    font-family: $manrope-extrabold;
+    font-weight: normal;
+    font-size: pxToVw(60);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    text-align: left;
+    color: $black;
+  }
+
+  .banner-description {
+    font-family: $manrope-medium;
+    font-weight: 500;
+    font-size: pxToEm(20);
+    line-height: 1.3;
+    text-align: left;
+    color: $light-purple;
+  }
+
+  .banner-form {
+    .form-title {
+      font-family: Manrope;
+      font-weight: bold;
+      font-size: pxToEm(24);
+      line-height: 1;
+      text-align: left;
+      color: $dark-purple;
+      margin-bottom: pxToEm(20);
+    }
+
+    .form-inputs input {
+      width: 100%;
+      padding: 0.7rem 3rem;
+      margin-bottom: pxToEm(24);
+    }
+    input::placeholder {
+      font-family: $manrope-medium;
+      font-weight: 500;
+      font-size: pxToEm(20);
+      text-align: left;
+      color: $light-purple;
+      opacity: 0.4;
+    }
+    .form-btn {
+      .orange-btn {
+        border-radius: 5px;
+        background: #ff7f5c;
+        color: $white;
+        font-family: $manrope-bold;
+        font-weight: bold;
+        font-size: pxToEm(16);
+        text-align: center;
+        color: $white;
+        padding: 0.7rem 3rem;
+      }
+    }
+  }
+}

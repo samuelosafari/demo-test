@@ -1,0 +1,62 @@
+// fonts
+$font-path: "landingpage/fonts/";
+$gilroy-bold: "GILROY-BOLD";
+$gilroy-extrabold: "GILROY-EXTRABOLD";
+$gilroy-light: "GILROY-LIGHT";
+$gilroy-medium: "GILROY-MEDIUM";
+$manrope-bold: "MANROPE-BOLD";
+$manrope-extrabold: "MANROPE-EXTRABOLD";
+$manrope-extralight: "MANROPE-EXTRALIGHT";
+$manrope-light: "MANROPE-LIGHT";
+$manrope-medium: "MANROPE-MEDIUM";
+$manrope-regular: "MANROPE-REGULAR";
+
+@font-face {
+  font-family: #{$gilroy-bold};
+  src: url(#{$font-path}GILROY-BOLD.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: #{$gilroy-extrabold};
+  src: url(#{$font-path}GILROY-EXTRABOLD.OTF) format("OTF");
+}
+
+@font-face {
+  font-family: #{$gilroy-light};
+  src: url(#{$font-path}GILROY-LIGHT.OTF) format("OTF");
+}
+
+@font-face {
+  font-family: #{$gilroy-medium};
+  src: url(#{$font-path}GILROY-MEDIUM.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: #{$manrope-bold};
+  src: url(#{$font-path}MANROPE-BOLD.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: #{$manrope-extrabold};
+  src: url(#{$font-path}MANROPE-EXTRABOLD.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: #{$manrope-extralight};
+  src: url(#{$font-path}MANROPE-EXTRALIGHT.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: #{$manrope-light};
+  src: url(#{$font-path}MANROPE-LIGHT.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: #{$manrope-medium};
+  src: url(#{$font-path}MANROPE-MEDIUM.TTF) format("truetype");
+}
+
+@font-face {
+  font-family: #{$manrope-regular};
+  src: url(#{$font-path}MANROPE-REGULAR.TTF) format("truetype");
+}

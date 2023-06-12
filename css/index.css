@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: GILROY-BOLD;
+  src: url(landingpage/fonts/GILROY-BOLD.TTF) format("truetype");
+}
+@font-face {
+  font-family: GILROY-EXTRABOLD;
+  src: url(landingpage/fonts/GILROY-EXTRABOLD.OTF) format("OTF");
+}
+@font-face {
+  font-family: GILROY-LIGHT;
+  src: url(landingpage/fonts/GILROY-LIGHT.OTF) format("OTF");
+}
+@font-face {
+  font-family: GILROY-MEDIUM;
+  src: url(landingpage/fonts/GILROY-MEDIUM.TTF) format("truetype");
+}
+@font-face {
+  font-family: MANROPE-BOLD;
+  src: url(landingpage/fonts/MANROPE-BOLD.TTF) format("truetype");
+}
+@font-face {
+  font-family: MANROPE-EXTRABOLD;
+  src: url(landingpage/fonts/MANROPE-EXTRABOLD.TTF) format("truetype");
+}
+@font-face {
+  font-family: MANROPE-EXTRALIGHT;
+  src: url(landingpage/fonts/MANROPE-EXTRALIGHT.TTF) format("truetype");
+}
+@font-face {
+  font-family: MANROPE-LIGHT;
+  src: url(landingpage/fonts/MANROPE-LIGHT.TTF) format("truetype");
+}
+@font-face {
+  font-family: MANROPE-MEDIUM;
+  src: url(landingpage/fonts/MANROPE-MEDIUM.TTF) format("truetype");
+}
+@font-face {
+  font-family: MANROPE-REGULAR;
+  src: url(landingpage/fonts/MANROPE-REGULAR.TTF) format("truetype");
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 27.3148148148vh;
+  align-items: center;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.navbar .nav-links .singlelink-icon {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.navbar .nav-link {
+  font-family: "MANROPE-MEDIUM";
+  font-weight: 600;
+  font-size: 0.875em;
+  text-align: center;
+  color: #000;
+}
+.navbar .sidenav-links {
+  display: flex;
+  gap: 4.6759259259vh;
+  align-items: center;
+}
+.navbar .sidenav-links .nav-btn {
+  border-radius: 10px;
+  background: #4f46ba;
+  font-family: Manrope, sans-serif;
+  font-weight: 600;
+  font-size: 0.875em;
+  text-align: center;
+  color: #fff;
+  padding: 17px 35px;
+}
+.navbar .navbar-logo {
+  font-family: "MANROPE-MEDIUM";
+  font-weight: bold;
+  font-size: 1.25em;
+  text-align: center;
+  color: #000;
+  align-items: center;
+}
+
+.banner .banner-heading {
+  font-family: "MANROPE-EXTRABOLD";
+  font-weight: normal;
+  font-size: 3.125vw;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  text-align: left;
+  color: #000;
+}
+.banner .banner-description {
+  font-family: "MANROPE-MEDIUM";
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.3;
+  text-align: left;
+  color: #64607d;
+}
+.banner .banner-form .form-title {
+  font-family: Manrope;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1;
+  text-align: left;
+  color: #3734a9;
+  margin-bottom: 1.25em;
+}
+.banner .banner-form .form-inputs input {
+  width: 100%;
+  padding: 0.7rem 3rem;
+  margin-bottom: 1.5em;
+}
+.banner .banner-form input::placeholder {
+  font-family: "MANROPE-MEDIUM";
+  font-weight: 500;
+  font-size: 1.25em;
+  text-align: left;
+  color: #64607d;
+  opacity: 0.4;
+}
+.banner .banner-form .form-btn .orange-btn {
+  border-radius: 5px;
+  background: #ff7f5c;
+  color: #fff;
+  font-family: "MANROPE-BOLD";
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  color: #fff;
+  padding: 0.7rem 3rem;
+}
